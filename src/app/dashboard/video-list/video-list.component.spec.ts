@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoListComponent } from './video-list.component';
+import {DashboardModule} from '../dashboard.module';
 
 describe('VideoListComponent', () => {
   let component: VideoListComponent;
@@ -8,7 +9,8 @@ describe('VideoListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoListComponent ]
+      declarations: [ VideoListComponent ],
+      imports:[ DashboardModule ]
     })
     .compileComponents();
   }));
@@ -20,6 +22,20 @@ describe('VideoListComponent', () => {
   });
 
   it('should create', () => {
+    const videos: Video[] = [  {
+      "title": "Angular Observable Data Flow",
+      "author": "Kyle Cordes",
+      "id": "JPuqluYYa-o",
+      "viewDetails": [
+        {
+          "age": 17,
+          "region": "North America",
+          "date": "2016-03-23"
+        }
+      ]
+    }]
+    component.videos = videos;
+    component.selectedVideo = videos[0];
     expect(component).toBeTruthy();
   });
 });

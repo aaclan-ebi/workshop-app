@@ -11,7 +11,7 @@ export class VideoListComponent implements OnInit {
   @Input() videos: Video[];
   @Output('select') selectVideo : EventEmitter<Video> = new EventEmitter<Video>();
 
-  selectedVideo;
+  selectedVideo: Video;
 
   constructor() { }
 
