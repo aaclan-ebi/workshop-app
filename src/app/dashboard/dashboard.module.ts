@@ -7,7 +7,6 @@ import { StatFiltersComponent } from './stat-filters/stat-filters.component';
 import {RouterModule, Routes} from '@angular/router';
 import { VideoComponent } from './video/video.component';
 
-
 const dashboardRoutes: Routes = [
   { path: '', component: VideoDashboardComponent }
 ];
@@ -16,8 +15,9 @@ const dashboardRoutes: Routes = [
   declarations: [VideoDashboardComponent, VideoListComponent, VideoPlayerComponent, StatFiltersComponent, VideoComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(dashboardRoutes)
-  ]
+    RouterModule.forChild(dashboardRoutes),
+  ],
+  providers:[]
 })
 
 export class DashboardModule { }
