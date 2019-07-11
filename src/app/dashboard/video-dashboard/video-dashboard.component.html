@@ -1,4 +1,3 @@
 <app-video-player [selectedVideo]="selectedVideo"></app-video-player>
-<app-video-list (select)="onSelect($event)" [videos]="videos"></app-video-list>
+<app-video-list (select)="onSelect($event)" [videos]="videos$ | async"></app-video-list>
 <app-stat-filters></app-stat-filters>
-

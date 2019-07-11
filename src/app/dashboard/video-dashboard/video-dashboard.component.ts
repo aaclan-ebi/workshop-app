@@ -1,28 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import {VideoApiService} from '../../video-api.service';
+import { Component, OnInit } from "@angular/core";
+import { VideoApiService } from "../../video-api.service";
+import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-video-dashboard',
-  templateUrl: './video-dashboard.component.html',
-  styleUrls: ['./video-dashboard.component.css']
+  selector: "app-video-dashboard",
+  templateUrl: "./video-dashboard.component.html",
+  styleUrls: ["./video-dashboard.component.css"]
 })
 export class VideoDashboardComponent implements OnInit {
-
-  videos: Video[];
+  videos$: Observable<Video[]>;
   selectedVideo;
 
   constructor(private videoService: VideoApiService) {
-    videoService.getVideos().subscribe(
-      video => (this.videos = video)
-    );
+    this.videos$ = videoService.getVideos();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelect(event: Video) {
     this.selectedVideo = event;
   }
 }
-
-

@@ -1,18 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { VideoDashboardComponent } from './video-dashboard.component';
-import {VideoComponent} from '../video/video.component';
+import { VideoDashboardComponent } from "./video-dashboard.component";
+import { VideoComponent } from "../video/video.component";
 
-describe('VideoDashboardComponent', () => {
+describe("VideoDashboardComponent", () => {
   let component: VideoDashboardComponent;
   let video: VideoComponent;
   let fixture: ComponentFixture<VideoDashboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoDashboardComponent ]
-    })
-    .compileComponents();
+      declarations: [VideoDashboardComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,7 +20,7 @@ describe('VideoDashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

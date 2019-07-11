@@ -1,5 +1,9 @@
 <ul>
-  <li [class.selected]="video===selectedVideo" (click)="select(video)" *ngFor="let video of videos; index as i">
+  <li
+    [class.selected]="video === selectedVideo"
+    (click)="select(video)"
+    *ngFor="let video of videos"
+  >
     <app-video [video]="video"></app-video>
   </li>
 </ul>
