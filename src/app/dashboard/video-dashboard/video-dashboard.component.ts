@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {VideoService} from '../../video.service';
+import {VideoApiService} from '../../video-api.service';
 
 @Component({
   selector: 'app-video-dashboard',
@@ -11,7 +11,7 @@ export class VideoDashboardComponent implements OnInit {
   videos: Video[];
   selectedVideo;
 
-  constructor(private videoService: VideoService) {
+  constructor(private videoService: VideoApiService) {
     videoService.getVideos().subscribe(
       video => (this.videos = video)
     );

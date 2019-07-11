@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { VideoService } from './video.service';
+import { VideoApiService } from './video-api.service';
 
-describe('VideoService', () => {
+describe('VideoApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: VideoService = TestBed.get(VideoService);
+    const service: VideoApiService = TestBed.get(VideoApiService);
     expect(service).toBeTruthy();
   });
 });

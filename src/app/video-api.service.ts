@@ -7,7 +7,7 @@ const API_URL = 'https://api.angularbootcamp.com'; // TODO can be put to env ts
   providedIn: 'root'
 })
 
-export class VideoService {
+export class VideoApiService {
 
   constructor(private http: HttpClient) {}
 
@@ -15,4 +15,3 @@ export class VideoService {
     return this.http.get<Video[]>(API_URL + '/videos');
   }
 }
-
